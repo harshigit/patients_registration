@@ -1,0 +1,24 @@
+<h1>Listing patients</h1>
+ 
+<table>
+  <tr>
+    <th>Patient_name</th>
+    <th>DOB</th>
+	<th>Identity_card_type</th>
+	<th>Identity_card_number</th>
+	<th>Staff_identity</th>
+	<th>Staff_sys_ip_location</th>
+  </tr>
+ 
+  <% @patients.each do |patient| %>
+    <tr>
+      <td><%= patient.Patient_name %></td>
+      <td><%= patient.DOB %></td>
+	  <td><%= patient.Identity_card_type %></td>
+	  <td><%= patient.Identity_card_number %></td>
+	  <td><%= patient.Staff_identity %></td>
+	  <td><%= patient.Staff_sys_ip_location %></td>
+      <td><%= link_to 'Show', patient_path(patient) %></td>
+    </tr>
+  <% end %>
+</table>

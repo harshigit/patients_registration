@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Patient_name: MyString
+  DOB: 1
+  Identity_card_type: MyString
+  Identity_card_number: 1
+  Staff_identity: 1
+
+two:
+  Patient_name: MyString
+  DOB: 1
+  Identity_card_type: MyString
+  Identity_card_number: 1
+  Staff_identity: 1
