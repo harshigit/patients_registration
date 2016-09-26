@@ -1,31 +1,30 @@
 <p>
-  <strong>Patient_name:</strong>
+  <strong>Patient name:</strong>
   <%= @patient.Patient_name %>
 </p>
  
 <p>
   <strong>DOB:</strong>
-  <%= @patient.dob %>
+  <%= @patient.DOB %>
 </p>
 
 <p>
-  <strong>Identity_card_type:</strong>
+  <strong>Identity card type:</strong>
   <%= @patient.Identity_card_type %>
 </p>
 
 <p>
-  <strong>Identity_card_number:</strong>
+  <strong>Identity card number:</strong>
   <%= @patient.Identity_card_number %>
 </p>
 
 <p>
-  <strong>Staff_identity:</strong>
+  <strong>Staff identity:</strong>
   <%= @patient.Staff_identity %>
 </p>
 
-<p>
-  <strong>Staff_sys_ip_location:</strong>
-  <%= @patient.Staff_sys_ip_location %>
-</p>
 
 
+<%=  link_to 'Back', patients_path %></br>
+
+<a href="/patients/new">Click here to register new Patient!</a>

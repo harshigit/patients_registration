@@ -6,6 +6,6 @@ class CreateStaffs < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-	add_foreign_key :staffs, :Patients, column: :Staff_identity, primary_key:Staff_identity
+	add_foreign_key :staffs, :Patients, column: :Staff_identity #primary_key:Staff_identity
   end
 end

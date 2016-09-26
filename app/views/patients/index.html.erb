@@ -1,13 +1,15 @@
-<h1>Listing patients</h1>
- 
+<h1>Patient Details</h1>
+
+ <%= link_to 'New patient', new_patient_path %>
 <table>
   <tr>
-    <th>Patient_name</th>
+    <th><em>Patient name</em></th>
     <th>DOB</th>
-	<th>Identity_card_type</th>
-	<th>Identity_card_number</th>
-	<th>Staff_identity</th>
-	<th>Staff_sys_ip_location</th>
+	<th><em>Identity card type</em></th>
+	<th>Identity card number</th>
+	<th><em>Staff identity</em></th>
+	<th colspan = "5"></th>
+	
   </tr>
  
   <% @patients.each do |patient| %>
@@ -17,8 +19,11 @@
 	  <td><%= patient.Identity_card_type %></td>
 	  <td><%= patient.Identity_card_number %></td>
 	  <td><%= patient.Staff_identity %></td>
-	  <td><%= patient.Staff_sys_ip_location %></td>
-      <td><%= link_to 'Show', patient_path(patient) %></td>
+	  
+
+
+	 
+      <td><%= link_to 'Show', patient %></td>
     </tr>
   <% end %>
 </table>

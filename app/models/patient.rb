@@ -1,4 +1,6 @@
 class Patient < ApplicationRecord
-has_many :Staff
-validates :Staff_identity, presence: true, length: {minimum: 3 }
+ has_one :staffs
+  validates :Patient_name, presence: true, length: {minimum: 7 }
+  accepts_nested_attributes_for :staffs
+   
 end

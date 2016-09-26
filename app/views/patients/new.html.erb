@@ -1,37 +1,36 @@
-<h1>New Patient Registration!!</h1>
+<h3><center>New Patient Registration!!</center></h3>
+<%= image_tag('patient.png', :size => '100x100') %>
 
-<%= form_for @patient, url: {action: "create"}, html: {class: "patient"} do |f| %>
-  <p>
-    <%= f.label :Patient_name %><br>
+<%= form_for :patient, url: patients_path do |f| %>
+ 
+  
+ <Center> 
+  <p> Patient name:<br/>
     <%= f.text_area :Patient_name %>
   </p>
  
-  <p>
-    <%= f.label :DOB %><br>
+  <p> DOB:<br/>
     <%= f.date_field :DOB %>
   </p>
  
-  <p>
-    <%= f.label :Identity_card_type %><br>
-    <%= f.text_field :Identity_card_type %>
+  <p> Identity card type:<br/>
+    <%= f.text_area :Identity_card_type %>
   </p>
   
-   <p>
-    <%= f.label :Identity_card_number %><br>
+   <p> Identity card number:<br>
     <%= f.number_field :Identity_card_number %>
   </p>
   
-   <p>
-    <%= f.label :Staff_identity %><br>
+   <p> Staff identity: <br>
     <%= f.number_field :Staff_identity %>
   </p>
   
-  <p>
-    <%= f.label :Staff_sys_ip_location %><br>
-    <%= f.number_field :Staff_sys_ip_location %>
-  </p> 
+ 
   
   <p>
     <%= f.submit "Create" %>
   </p>
 <% end %>
+
+
+<%=  link_to 'Back', patients_path %>
